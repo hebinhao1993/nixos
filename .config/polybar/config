@@ -220,9 +220,19 @@ cursor-click =
 cursor-scroll = 
 
 
-[module/i3]
-type = internal/i3
-format = "<label-state> <label-mode>"
-format-padding = 0
-index-sort = true
-wrapping-scroll = false
+[module/date]
+type = internal/date
+interval = 60
+date = %d/%m
+time = %H:%M
+label =  %date%  %time%
+# format-underline = #99CCFF
+format-underline = #B488FF
+format-padding = 1
+
+; [module/i3]
+; type = internal/i3
+; format = "<label-state> <label-mode>"
+; format-padding = 0
+; index-sort = true
+; wrapping-scroll = false
