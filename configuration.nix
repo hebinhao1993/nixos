@@ -45,8 +45,9 @@
         git
         vim
         wget
-        termite
+        termite # terminal
         clipmenu
+        Zathura # vim style pdf viewer
     ];
     
     fonts = {
