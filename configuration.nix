@@ -72,7 +72,7 @@
                     enable = true;
                     autoLogin = {
                         enable = true;
-                        user = hbh;
+                        user = "hbh";
                     };
                 };
             };
