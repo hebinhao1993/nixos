@@ -99,7 +99,7 @@
         home = "/home/hbh";
         description = "hebinhao";
         extraGroups = [ "wheel" ];
-    }
+    };
 
     system.stateVersion = "20.03";
 }
