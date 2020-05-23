@@ -116,7 +116,7 @@ font-0 =
 ;   modules-right = ipc clock
 modules-left =
 modules-center =
-modules-right = data
+modules-right = date
 
 ; The separator will be inserted between the output of each module
 separator =
