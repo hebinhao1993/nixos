@@ -116,7 +116,7 @@ font-0 =
 ;   modules-right = ipc clock
 modules-left =
 modules-center =
-modules-right =
+modules-right = data
 
 ; The separator will be inserted between the output of each module
 separator =
@@ -222,13 +222,36 @@ cursor-scroll =
 
 [module/date]
 type = internal/date
-interval = 60
-date = %d/%m
+
+; Seconds to sleep between updates
+; Default: 1.0
+interval = 1.0
+
+; See "https://en.cppreference.com/w/cpp/io/manip/put_time" for details on how to format the date string
+; NOTE: if you want to use syntax tags here you need to use %%{...}
+date = %Y-%m-%d%
+
+; Optional time format
 time = %H:%M
-label =  %date%  %time%
-# format-underline = #99CCFF
-format-underline = #B488FF
-format-padding = 1
+
+; if `date-alt` or `time-alt` is defined, clicking
+; the module will toggle between formats
+date-alt = %A, %d %B %Y
+time-alt = %H:%M:%S
+
+; Available tags:
+;   <label> (default)
+format = 🕓 <label>
+format-background = #55ff3399
+format-foreground = #fff
+
+; Available tokens:
+;   %date%
+;   %time%
+; Default: %date%
+label = %date% %time%
+label-font = 3
+label-foreground = #9A32DB
 
 ; [module/i3]
 ; type = internal/i3
