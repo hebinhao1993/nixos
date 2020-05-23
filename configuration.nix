@@ -79,7 +79,7 @@
             # others
             font-awesome
             ubuntu_font_family
-            nerdfonts
+            # nerdfonts # it will try to download from github, so comment it in case of bad networking.
             opensans-ttf
             wqy_microhei
             wqy_zenhei
