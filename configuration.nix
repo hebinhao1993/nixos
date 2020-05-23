@@ -57,18 +57,30 @@
         enableFontDir = true;
         enableGhostscriptFonts = true;
         fonts = with pkgs; [
+            # fira 
+            fira 
+            fira-code # FiraCode: font for coding, https://github.com/tonsky/FiraCode
+            fira-mono
+            fira-code-symbols
+            # noto
             noto-fonts
             noto-fonts-cjk
             noto-fonts-emoji
+            # The Liberation(tm) Fonts is a font family which aims at metric compatibility with Arial, Times New Roman, and Courier New. It is sponsored by Red Hat.
             liberation_ttf
-            fira-code
-            fira-code-symbols
-            mplus-outline-fonts
-            dina-font
-            proggyfonts
-            hermit
+            # adobe  
             source-code-pro
-            terminus_font
+            source-sans-pro
+            source-han-sans-simplified-chinese
+            source-han-sans-traditional-chinese
+            # be5invis's font
+            iosevka
+            sarasa-gothic
+            # others
+            font-awesome
+            ubuntu_font_family
+            nerdfonts
+            opensans-ttf
             wqy_microhei
             wqy_zenhei
         ];
