@@ -218,3 +218,11 @@ double-click-right =
 ; - ns-resize : Up and down arrows, can be used to indicate scrolling
 cursor-click = 
 cursor-scroll = 
+
+
+[module/i3]
+type = internal/i3
+format = "<label-state> <label-mode>"
+format-padding = 0
+index-sort = true
+wrapping-scroll = false
