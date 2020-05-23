@@ -34,6 +34,9 @@
     time.timeZone = "Asia/Shanghai";
 
     nixpkgs.config.allowUnfree = true;
+
+    environment.pathsToLink = [ "/libexec" ];
+
     environment.systemPackages = with pkgs; [
         firefox
         git
@@ -57,22 +60,40 @@
    
     
     services = {
-        openssh.enable = true;
         xserver = {
             enable = true;
             layout = "us";
-            displayManager.lightdm = {
-                enable = true;
-                greeters.pantheon.enable = true;
+            desktopManager = {
+                xterm.enable = false;
             };
-            desktopManager.pantheon.enable = true;
-            
+            displayManager = {
+                defaultSession = "none+i3";
+                lightdm = {
+                    enable = true;
+                    autoLogin = {
+                        enable = true;
+                        user = hbh;
+                    };
+                };
+            };
+            windowManager = {
+                i3 = {
+                    enable = true;
+                };
+            };
         };
     };
 
     programs.bash.enableCompletion = true;
     sound.enable = true;
     hardware.pulseaudio.enable = true;
+
+    users.users.hbh = {
+        isNormalUser = true;
+        home = "/home/hbh";
+        description = "hebinhao";
+        extraGroups = [ "wheel" ];
+    }
 
     system.stateVersion = "20.03";
 }
