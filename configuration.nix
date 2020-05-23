@@ -35,6 +35,9 @@
 
     nixpkgs.config.allowUnfree = true;
 
+    environment.variables = {
+        TERMINAL = "termite"; # i3wm 启动终端优先启动该环境变量所指定的。见[此](https://build.i3wm.org/docs/i3-sensible-terminal.html)
+    };
     environment.pathsToLink = [ "/libexec" ];
 
     environment.systemPackages = with pkgs; [
