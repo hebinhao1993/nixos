@@ -48,6 +48,7 @@
         termite # terminal
         clipmenu
         Zathura # vim style pdf viewer
+        polybar # A fast and easy to use tool for creating status bars
     ];
     
     fonts = {
