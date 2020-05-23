@@ -43,6 +43,7 @@
         vim
         wget
         termite
+        clipmenu
     ];
     
     fonts = {
@@ -60,6 +61,9 @@
             mplus-outline-fonts
             dina-font
             proggyfonts
+            hermit
+            source-code-pro
+            terminus_font
             wqy_microhei
             wqy_zenhei
         ];
