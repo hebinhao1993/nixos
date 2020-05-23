@@ -42,6 +42,7 @@
         git
         vim
         wget
+        termite
     ];
     
     fonts = {
