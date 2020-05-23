@@ -14,7 +14,7 @@
             systemd-boot = {
                 enable = true;
             };
-            efi.canTouchEfiVariable = true;
+            efi.canTouchEfiVariables = true;
         };
     };
 
