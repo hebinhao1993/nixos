@@ -12,7 +12,7 @@
     boot = {
         loader = {
             systemd-boot = {
-                enabled = true;
+                enable = true;
             };
             efi.canTouchEfiVariable = true;
         };
