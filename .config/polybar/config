@@ -451,6 +451,7 @@ time-alt = %H:%M:%S
 ;   <label> (default)
 ; format = 🕓 <label>
 format-background = ${colors.background-module}
+format-padding = 1
 ; format-foreground = #fff
 
 ; Available tokens:
