@@ -54,7 +54,7 @@ monitor-exact = true
 override-redirect = true
 
 ; Put the bar at the bottom of the screen
-bottom = false
+bottom = true
 
 ; Prefer fixed center position for the `modules-center` block. 
 ; The center block will stay in the middle of the bar whenever
@@ -68,7 +68,7 @@ fixed-center = true
 ; the percentage can optionally be extended with a pixel offset like so:
 ; 50%:-10, this will result in a width or height of 50% minus 10 pixels
 width = 100%
-height = 30
+height = 27
 
 ; Offset defined as pixel value (e.g. 35) or percentage (e.g. 50%)
 ; the percentage can optionally be extended with a pixel offset like so:
@@ -99,8 +99,8 @@ foreground = ${colors.foreground}
 ; Individual values can be defined using:
 ;   {overline,underline}-size
 ;   {overline,underline}-color
-; line-size = 0
-; line-color = #f00
+line-size = 0
+line-color = #f00
 
 ; Values applied to all borders
 ; Individual side values can be defined using:
@@ -122,7 +122,7 @@ border-top-size = 3
 border-bottom-size = 5 
 border-right-size = 0
 border-left-size = 0
-border-color = ${colors.background}
+border-color = #00000000
 
 ; Number of spaces to add at the beginning/end of the bar
 ; Individual side values can be defined using:
@@ -142,7 +142,10 @@ module-margin = 0
 ;   font-3 = FontAwesome:size=10
 ; See the Fonts wiki page for more details
 font-0 = NotoSans-Regular:size=8;2
-font-1 = FontAwesome5Free:style=Regular:size=12;2
+font-1 = MaterialIcons:size=10
+font-2 = FontAwesome5Free:style=Solid:size=12;2
+font-3 = FontAwesome5Free:style=Regular:size=12;2
+font-4 = FontAwesome5Brands:style=Regular:size=12;2
 
 ; Modules are added to one of the available blocks
 ;   modules-left = cpu ram
@@ -188,7 +191,7 @@ tray-position = right
 tray-detached = false
 
 ; Tray icon max size
-tray-maxsize = 22
+tray-maxsize = 24
 
 ; DEPRECATED! Since 3.3.0 the tray always uses pseudo-transparency
 ; Enable pseudo transparency
@@ -337,7 +340,7 @@ format-padding = 1
 ;   %time%
 ; Default: %date%
 label =  %date%  %time%
-; label-font = 3
+label-font = 3
 ; label-foreground = #9A32DB
 
 
