@@ -151,7 +151,7 @@ font-4 = FontAwesome5Brands:style=Regular:size=12;2
 ;   modules-left = cpu ram
 ;   modules-center = xwindow xbacklight
 ;   modules-right = ipc clock
-modules-left = 
+modules-left = i3
 modules-center = 
 modules-right = date
 
