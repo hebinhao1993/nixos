@@ -98,6 +98,7 @@
             opensans-ttf
             wqy_microhei
             wqy_zenhei
+            material-icons
         ];
     };
    
