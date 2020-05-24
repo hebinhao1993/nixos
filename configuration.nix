@@ -48,7 +48,7 @@
         termite # terminal
         clipmenu
         zathura # vim style pdf viewer
-        polybar # A fast and easy to use tool for creating status bars
+        polybarFull # A fast and easy to use tool for creating status bars
         sdcv # star dict under console version
         ranger # file manger
     ];
