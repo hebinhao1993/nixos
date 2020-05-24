@@ -431,7 +431,7 @@ time-alt = %H:%M:%S
 ; format-background = #00000000
 ; format-padding = 1
 ; format-foreground = #fff
-format-underline = #B488FF
+format-underline = #00
 format-padding = 1
 
 ; Available tokens:
