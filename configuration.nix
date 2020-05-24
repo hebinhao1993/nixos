@@ -51,6 +51,12 @@
         polybarFull # A fast and easy to use tool for creating status bars
         sdcv # star dict under console version
         ranger # file manger
+        feh # A light-weight image viewer
+        neocomp # A fork of Compton, a compositor for X11
+        gnome3.gucharmap # GNOME Character Map, based on the Unicode Character Database
+        flameshot # Powerful yet simple to use screenshot software
+        # networkmanagerapplet # NetworkManager control applet for GNOME
+        # networkmanager_dmenu # Small script to manage NetworkManager connections with dmenu instead of nm-applet
     ];
     
     fonts = {
