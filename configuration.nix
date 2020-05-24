@@ -46,7 +46,14 @@
         vim
         wget
         termite # terminal
+        # rxvt-unicode
+        # tilix
+        # terminator
+        # kdeApplications.konsole
+        # xfce.xfce4-terminal
+        # gnome3.gnome-terminal
         clipmenu
+        # clipit
         zathura # vim style pdf viewer
         polybarFull # A fast and easy to use tool for creating status bars
         sdcv # star dict under console version
