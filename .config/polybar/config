@@ -51,7 +51,7 @@ monitor-exact = true
 ; Note: With this most WMs will no longer reserve space for 
 ; the bar and it will overlap other windows. You need to configure
 ; your WM to add a gap where the bar will be placed.
-; override-redirect = true
+override-redirect = true
 
 ; Put the bar at the bottom of the screen
 bottom = false
