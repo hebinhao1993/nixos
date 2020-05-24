@@ -450,7 +450,7 @@ time-alt = %H:%M:%S
 ; Available tags:
 ;   <label> (default)
 ; format = 🕓 <label>
-format-background = #123456
+format-background = #cc222222
 format-padding = 1
 ; format-foreground = #fff
 
