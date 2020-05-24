@@ -143,9 +143,9 @@ font-0 =
 ;   modules-left = cpu ram
 ;   modules-center = xwindow xbacklight
 ;   modules-right = ipc clock
-modules-left =
-modules-center =
-modules-right = date
+modules-left = filesystem
+modules-center = date
+modules-right = 
 
 ; The separator will be inserted between the output of each module
 separator =
