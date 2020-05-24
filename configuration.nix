@@ -64,6 +64,7 @@
         flameshot # Powerful yet simple to use screenshot software
         # networkmanagerapplet # NetworkManager control applet for GNOME
         # networkmanager_dmenu # Small script to manage NetworkManager connections with dmenu instead of nm-applet
+        # lxappearance-gtk3 # A lightweight program for configuring the theme and fonts of gtk applications
     ];
     
     fonts = {
@@ -102,7 +103,7 @@
         ];
     };
    
-    
+    virtualisation.virtualbox.guest.enable = true;
     services = {
         xserver = {
             enable = true;
