@@ -375,7 +375,7 @@ menu-2-1-exec = menu-open-0
 
 [module/poweroff]
 type = custom/script
-exec = echo "  "
+exec = echo "  "
 click-left = rofi -modi run,drun,window -show drun
 click-right = i3lock-fancy -pg &
 click-middle = /usr/bin/rofi-logout
