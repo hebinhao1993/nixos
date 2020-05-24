@@ -18,7 +18,7 @@
 
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #222
+background = #00000000
 background-alt = #444
 ;foreground = ${xrdb:color7:#222}
 foreground = #dfdfdf
@@ -430,19 +430,32 @@ format-disconnected =
 
 [module/date]
 type = internal/date
-interval = 5
+interval = 1
 
-date =
-date-alt = " %Y-%m-%d"
+date =  %a %d
+date-alt = %a %Y-%m-%d
 
 time = %H:%M
 time-alt = %H:%M:%S
 
-format-prefix = 
-format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #0a6cf5
+; format-prefix = 
+; format-prefix-foreground = ${colors.foreground-alt}
+; format-underline = #0a6cf5
 
+; Available tags:
+;   <label> (default)
+; format = 🕓 <label>
+format-background = ${colors.background}
+; format-foreground = #fff
+
+; Available tokens:
+;   %date%
+;   %time%
+; Default: %date%
 label = %date% %time%
+; label-font = 3
+; label-foreground = #9A32DB
+
 
 [module/pulseaudio]
 type = internal/pulseaudio
