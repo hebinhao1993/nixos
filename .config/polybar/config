@@ -153,7 +153,7 @@ font-4 = FontAwesome5Brands:style=Regular:size=12;2
 ;   modules-right = ipc clock
 modules-left = i3
 modules-center = 
-modules-right = date
+modules-right = date poweroff
 
 ; The separator will be inserted between the output of each module
 separator =
@@ -372,6 +372,14 @@ menu-2-0 = power off
 menu-2-0-exec = sudo poweroff
 menu-2-1 = cancel
 menu-2-1-exec = menu-open-0
+
+[module/poweroff]
+type = custom/script
+exec = echo "  "
+click-left = rofi -modi run,drun,window -show drun
+click-right = i3lock-fancy -pg &
+click-middle = /usr/bin/rofi-logout
+format-padding = 1
 
 [settings]
 screenchange-reload = true
