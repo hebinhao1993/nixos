@@ -148,9 +148,9 @@ font-1 = FontAwesome5Free:style=Regular:size=12;2
 ;   modules-left = cpu ram
 ;   modules-center = xwindow xbacklight
 ;   modules-right = ipc clock
-modules-left = filesystem
-modules-center = date
-modules-right = 
+modules-left = 
+modules-center = 
+modules-right = date
 
 ; The separator will be inserted between the output of each module
 separator =
