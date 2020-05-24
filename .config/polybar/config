@@ -86,7 +86,7 @@ foreground = ${colors.foreground-i3bar}
 
 ; Background gradient (vertical steps)
 ;   background-[0-9]+ = #aarrggbb
-background-0 = 
+; background-0 = 
 
 ; Value used for drawing rounded corners
 ; Note: This shouldn't be used together with border-size because the border 
@@ -94,14 +94,14 @@ background-0 =
 ; pseudo-transparency or use a compositor like compton.
 ; Individual top/bottom values can be defined using:
 ;   radius-{top,bottom}
-radius = 0.0
+; radius = 0.0
 
 ; Under-/overline pixel size and argb color
 ; Individual values can be defined using:
 ;   {overline,underline}-size
 ;   {overline,underline}-color
-line-size = 0
-line-color = #f00
+; line-size = 0
+; line-color = #f00
 
 ; Values applied to all borders
 ; Individual side values can be defined using:
@@ -118,8 +118,12 @@ line-color = #f00
 ; the percentage can optionally be extended with a pixel offset like so:
 ; 50%:-10, this will result in 50% minus 10 pixels. The percentage is relative
 ; to the monitor width or height depending on the border direction. 
-border-size =
-border-color =
+; border-size =
+border-top-size = 3
+border-bottom-size = 5 
+border-right-size = 0
+border-left-size = 0
+border-color = ${colors.background-i3bar}
 
 ; Number of spaces to add at the beginning/end of the bar
 ; Individual side values can be defined using:
@@ -177,14 +181,14 @@ locale =
 ;   center
 ;   right
 ;   none
-tray-position =
+tray-position = right
 
 ; If true, the bar will not shift its
 ; contents when the tray changes
 tray-detached = false
 
 ; Tray icon max size
-tray-maxsize = 16
+tray-maxsize = 22
 
 ; DEPRECATED! Since 3.3.0 the tray always uses pseudo-transparency
 ; Enable pseudo transparency
@@ -196,14 +200,14 @@ tray-transparent = false
 ; ARGB color (e.g. #f00, #ff992a, #ddff1023)
 ; By default the tray container will use the bar
 ; background color.
-tray-background = ${root.background}
+; tray-background = ${root.background}
 
 ; Tray offset defined as pixel value (e.g. 35) or percentage (e.g. 50%)
 tray-offset-x = 0
 tray-offset-y = 0
 
 ; Pad the sides of each tray icon
-tray-padding = 0
+tray-padding = 6
 
 ; Scale factor for tray clients
 tray-scale = 1.0
@@ -217,7 +221,7 @@ tray-scale = 1.0
 ; Currently supported WM's:
 ;   bspwm
 ;   i3 (requires: `override-redirect = true`)
-; wm-restack =
+wm-restack = i3
 
 ; Set a DPI values used when rendering text
 ; This only affects scalable fonts
@@ -228,7 +232,7 @@ dpi-y = 96
 
 ; Enable support for inter-process messaging
 ; See the Messaging wiki page for more details.
-enable-ipc = false
+enable-ipc = true
 
 ; Fallback click handlers that will be called if
 ; there's no matching module handler found.
@@ -246,8 +250,8 @@ double-click-right =
 ; - default   : The default pointer as before, can also be an empty string (default)
 ; - pointer   : Typically in the form of a hand
 ; - ns-resize : Up and down arrows, can be used to indicate scrolling
-cursor-click = 
-cursor-scroll = 
+cursor-click = pointer
+cursor-scroll =  ns-resize
 
 
 [module/xwindow]
