@@ -49,6 +49,7 @@
         clipmenu
         zathura # vim style pdf viewer
         polybar # A fast and easy to use tool for creating status bars
+        sdcv # star dict under console version
     ];
     
     fonts = {

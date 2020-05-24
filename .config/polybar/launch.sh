@@ -10,4 +10,4 @@ ps -ef |grep polybar |awk '{print $2}'| xargs kill -9
 while pgrep -x polybar >/dev/null; do sleep 1; done
 
 # Launch
-polybar bar &
+polybar i3bar &
