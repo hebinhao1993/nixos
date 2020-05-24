@@ -438,7 +438,7 @@ format-padding = 1
 ;   %date%
 ;   %time%
 ; Default: %date%
-label = %date% %time%
+label =  %date%  %time%
 ; label-font = 3
 ; label-foreground = #9A32DB
 
