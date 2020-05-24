@@ -78,10 +78,10 @@ offset-x = 0
 offset-y = 0
 
 ; Background ARGB color (e.g. #f00, #ff992a, #ddff1023)
-background =  ${colors.background-i3bar}
+background =  ${colors.background}
 
 ; Foreground ARGB color (e.g. #f00, #ff992a, #ddff1023)
-foreground = ${colors.foreground-i3bar}
+foreground = ${colors.foreground}
 
 ; Background gradient (vertical steps)
 ;   background-[0-9]+ = #aarrggbb
@@ -122,7 +122,7 @@ border-top-size = 3
 border-bottom-size = 5 
 border-right-size = 0
 border-left-size = 0
-border-color = ${colors.background-i3bar}
+border-color = ${colors.background}
 
 ; Number of spaces to add at the beginning/end of the bar
 ; Individual side values can be defined using:
