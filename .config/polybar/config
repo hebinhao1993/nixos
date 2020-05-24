@@ -18,10 +18,11 @@
 
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #00000000
+background-i3bar = #80d0d0d0
+background-module = #00000000
 background-alt = #444
 ;foreground = ${xrdb:color7:#222}
-foreground = #dfdfdf
+foreground-i3bar = #191919
 foreground-alt = #555
 primary = #ffb52a
 secondary = #e60053
@@ -78,10 +79,10 @@ offset-x = 0
 offset-y = 0
 
 ; Background ARGB color (e.g. #f00, #ff992a, #ddff1023)
-background = #fff
+background =  ${colors.background-i3bar}
 
 ; Foreground ARGB color (e.g. #f00, #ff992a, #ddff1023)
-foreground = #000
+foreground = ${colors.foreground-i3bar}
 
 ; Background gradient (vertical steps)
 ;   background-[0-9]+ = #aarrggbb
@@ -137,7 +138,7 @@ module-margin = 0
 ;   font-2 = Termsynu:size=8;-1
 ;   font-3 = FontAwesome:size=10
 ; See the Fonts wiki page for more details
-font-0 =
+font-0 = NotoSans-Regular:size=8;2
 
 ; Modules are added to one of the available blocks
 ;   modules-left = cpu ram
@@ -445,7 +446,7 @@ time-alt = %H:%M:%S
 ; Available tags:
 ;   <label> (default)
 ; format = 🕓 <label>
-format-background = ${colors.background}
+format-background = ${colors.background-module}
 ; format-foreground = #fff
 
 ; Available tokens:
