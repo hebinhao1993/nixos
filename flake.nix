@@ -43,7 +43,7 @@
         specialArgs = { inherit inputs; }; # Pass flake inputs to our config
         # > Our main nixos configuration file <
         modules = [
-          ./nixos/configuration.nix
+          ./hosts/virtualbox/configuration.nix
 
           # home-manager as a NixOS module
           home-manager.nixosModules.home-manager
