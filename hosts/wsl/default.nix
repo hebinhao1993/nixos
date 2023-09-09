@@ -1,17 +1,9 @@
 { pkgs, ... }:
-
-let
-  nixos-wsl = import ./default.nix;
-in
 {
-  imports = [
-    nixos-wsl.nixosModules.wsl
-  ];
-
   wsl = {
     enable = true;
     wslConf.automount.root = "/mnt";
-    defaultUser = "nixos";
+    defaultUser = "hbh";
     startMenuLaunchers = true;
 
     # Enable native Docker support
@@ -27,6 +19,14 @@ in
   nix.extraOptions = ''
     experimental-features = nix-command flakes
   '';
+
+  environment.systemPackages = with pkgs; [
+    tree
+    file
+    wsl-open
+    git
+    vim
+  ];
 
   system.stateVersion = "23.05";
 }
