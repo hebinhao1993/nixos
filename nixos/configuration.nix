@@ -62,6 +62,7 @@
   # TODO: Set your hostname
   networking.hostName = "nixvb";
   networking.networkmanager.enable = true;
+  networking.firewall.allowedTCPPorts = [ 22 80 443 ];
 
   # TODO: This is just an example, be sure to use whatever bootloader you prefer
   boot.loader.systemd-boot.enable = true;
