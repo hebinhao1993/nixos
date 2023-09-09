@@ -61,7 +61,7 @@
 
   # TODO: Set your hostname
   networking.hostName = "nixvb";
-  networking.networkmanager.enbale = true;
+  networking.networkmanager.enable = true;
 
   # TODO: This is just an example, be sure to use whatever bootloader you prefer
   boot.loader.systemd-boot.enable = true;
