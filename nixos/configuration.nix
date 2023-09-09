@@ -60,7 +60,7 @@
   i18n.defaultLocale = "en_US.UTF-8";
 
   # TODO: Set your hostname
-  networking.hostName = "nixos-virtualbox-001";
+  networking.hostName = "nixvb";
   networking.networkmanager.enbale = true;
 
   # TODO: This is just an example, be sure to use whatever bootloader you prefer

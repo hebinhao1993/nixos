@@ -21,8 +21,8 @@
     # NixOS configuration entrypoint
     # Available through 'nixos-rebuild --flake .#your-hostname'
     nixosConfigurations = {
-      # FIXME replace with your hostname
-      nixos-virtualbox-001 = nixpkgs.lib.nixosSystem {
+      # hostname nixvb means nixos on virturalbox
+      nixvb = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs; }; # Pass flake inputs to our config
         # > Our main nixos configuration file <
         modules = [ ./nixos/configuration.nix ];
@@ -33,7 +33,7 @@
     # Available through 'home-manager --flake .#your-username@your-hostname'
     homeConfigurations = {
       # FIXME replace with your username@hostname
-      "hbh@nixos-virtualbox-001" = home-manager.lib.homeManagerConfiguration {
+      "hbh@nixvb" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
         extraSpecialArgs = { inherit inputs; }; # Pass flake inputs to our config
         # > Our main home-manager configuration file <
