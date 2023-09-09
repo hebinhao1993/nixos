@@ -51,6 +51,12 @@
       auto-optimise-store = true;
       # substituters
       substituters = [ "https://mirrors.ustc.edu.cn/nix-channels/store" ];
+      # trusted-users
+      trusted-users = [
+        "root"
+        "hbh"
+        "@wheel"
+      ];
     };
   };
 
