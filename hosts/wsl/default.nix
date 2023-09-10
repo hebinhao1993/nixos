@@ -1,5 +1,8 @@
-{ pkgs, ... }:
+{ lib, pkgs, config, modulesPath, ... }:
 {
+  imports = [
+    "${modulesPath}/profiles/minimal.nix"
+  ];
   wsl = {
     enable = true;
     wslConf.automount.root = "/mnt";
@@ -13,6 +16,7 @@
     # docker-desktop.enable = true;
 
   };
+  networking.hostName = "nixwsl";
 
   # Enable nix flakes
   nix.package = pkgs.nixFlakes;
@@ -21,11 +25,10 @@
   '';
 
   environment.systemPackages = with pkgs; [
-    tree
-    file
-    wsl-open
     git
     vim
+    curl
+    wget
   ];
 
   system.stateVersion = "23.05";

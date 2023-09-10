@@ -60,12 +60,13 @@
         ];
       };
 
-      wsl = nixpkgs.lib.nixosSystem {
+      nixwsl = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs; }; # Pass flake inputs to our config
         # > Our main nixos configuration file <
         modules = [
+          { nix.registry.nixpkgs.flake = nixpkgs; }
           ./hosts/wsl
-
+          nixos-wsl.nixosModules.wsl
           # home-manager as a NixOS module
           home-manager.nixosModules.home-manager
           {
