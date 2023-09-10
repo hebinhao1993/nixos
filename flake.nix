@@ -63,6 +63,7 @@
       nixwsl = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs; }; # Pass flake inputs to our config
         # > Our main nixos configuration file <
+        system = "x86_64-linux";
         modules = [
           { nix.registry.nixpkgs.flake = nixpkgs; }
           ./hosts/wsl
