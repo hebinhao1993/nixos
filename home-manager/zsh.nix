@@ -19,6 +19,6 @@ if [ -e ''${HOME}/.nix-profile/etc/profile.d/nix.sh ]; then . ''$HOME/.nix-profi
       # 这部分脚本优先级低于其他的
       initExtra = ''
       '';
-      };
+    };
   };
 }
