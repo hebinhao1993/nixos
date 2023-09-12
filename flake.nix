@@ -32,7 +32,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # TODO: Add any other flake you might need
+    # Add any other flake you might need
     # hardware.url = "github:nixos/nixos-hardware";
 
     # Shameless plug: looking for a way to nixify your themes and make
