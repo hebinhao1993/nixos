@@ -1,9 +1,9 @@
 {pkgs, ...} : 
 {
-  home.packages = with pkgs; [
+  packages = with pkgs; [
     ripgrep
   ];
-  home.programs = {
+  programs = {
     # TODO
   };
 }
