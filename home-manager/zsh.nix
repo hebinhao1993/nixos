@@ -1,4 +1,4 @@
-{pkg, ...} : 
+{pkgs, ...} : 
 {
   home.programs = {
     zsh = {
