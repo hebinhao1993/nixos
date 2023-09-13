@@ -11,6 +11,7 @@
     ./home-manager.nix
     ./git.nix
     ./cheat.nix
+    ./greplike
   ];
 
   nixpkgs = {
