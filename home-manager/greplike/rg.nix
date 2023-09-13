@@ -4,6 +4,6 @@
     ripgrep
   ];
   home.programs = {
-    // TODO
+    # TODO
   };
 }

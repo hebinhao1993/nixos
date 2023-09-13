@@ -4,6 +4,6 @@
     ack
   ];
   home.programs = {
-    // TODO
+    # TODO
   };
 }

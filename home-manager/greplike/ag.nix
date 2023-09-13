@@ -4,6 +4,6 @@
     silver-searcher
   ];
   home.programs = {
-    // TODO
+    # TODO
   };
 }

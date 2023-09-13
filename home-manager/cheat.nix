@@ -4,6 +4,6 @@
     cheat
   ];
   home.programs = {
-    // TODO
+    # TODO
   };
 }
