@@ -12,6 +12,8 @@
     ./git.nix
     ./cheat.nix
     ./greplike
+    ./tldr.nix
+    ./z.lua.nix
   ];
 
   nixpkgs = {
