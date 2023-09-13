@@ -1,6 +1,6 @@
 {config, pkgs, ...} : 
 {
-  packages = with pkgs; [
+  home.packages = with pkgs; [
     ripgrep
   ];
   programs = {
