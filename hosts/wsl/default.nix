@@ -18,6 +18,10 @@
   };
   networking.hostName = "nixwsl";
 
+  # zsh
+  programs.zsh.enable = true;
+  users.defaultUserShell = pkgs.zsh;
+  
   # Enable nix flakes
   nix.package = pkgs.nixFlakes;
   nix.extraOptions = ''
