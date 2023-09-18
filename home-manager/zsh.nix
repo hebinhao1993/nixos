@@ -37,5 +37,5 @@ source ''${ZIM_HOME}/init.zsh
     enable = true;
     source = "../dotfiles/src/.zimrc";
     target = ".config/zsh/.zimrc";
-  }
+  };
 }
