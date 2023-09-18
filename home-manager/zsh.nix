@@ -3,7 +3,7 @@
   home.programs = {
     zsh = {
       enable = true;
-      dotDir = ;
+      dotDir = ".config/zsh";
       enableAutosuggestions = ;
       enableCompletion = true;
       # Extra commands that should be added to .zshenv
