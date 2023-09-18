@@ -8,6 +8,7 @@
       syntaxHighlighting.enable = true;
       enableCompletion = true;
       # Extra commands that should be added to .zshenv
+      # TODO: the envExtra setting seems to be useless
       envExtra = ''
 if [ -e ''${HOME}/.nix-profile/etc/profile.d/nix.sh ]; then . ''$HOME/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
       '';
