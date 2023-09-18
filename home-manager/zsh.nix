@@ -4,7 +4,7 @@
     zsh = {
       enable = true;
       dotDir = ".config/zsh";
-      enableAutosuggestions = ;
+      enableAutosuggestions = true;
       enableCompletion = true;
       # Extra commands that should be added to .zshenv
       envExtra = ''
