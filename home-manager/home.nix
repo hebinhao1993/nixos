@@ -14,6 +14,7 @@
     ./greplike
     ./tldr.nix
     # ./z.lua.nix
+    ./lua.nix
     ./zsh.nix
   ];
 
