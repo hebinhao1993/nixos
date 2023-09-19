@@ -13,6 +13,7 @@
     ./cheat.nix
     ./greplike
     ./tldr.nix
+    ./tmux.nix
     # ./z.lua.nix
     ./lua.nix
     ./zsh.nix
