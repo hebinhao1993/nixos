@@ -32,6 +32,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    # sops
+    sops-nix = {
+      url = "github:Mic92/sops-nix";
+    };
+
     # Add any other flake you might need
     # hardware.url = "github:nixos/nixos-hardware";
 
@@ -40,7 +45,7 @@
     # nix-colors.url = "github:misterio77/nix-colors";
   };
 
-  outputs = { nixpkgs, home-manager, nixos-wsl, ... }@inputs: {
+  outputs = { nixpkgs, home-manager, nixos-wsl, sops-nix, ... }@inputs: {
     # NixOS configuration entrypoint
     # Available through 'nixos-rebuild --flake .#your-hostname'
     nixosConfigurations = {
@@ -57,6 +62,8 @@
             home-manager.useUserPackages = true;
             home-manager.users.hbh = import ./home-manager/home.nix;
           }
+
+          sops-nix.nixosModules.sops
         ];
       };
 
@@ -74,6 +81,7 @@
             home-manager.useUserPackages = true;
             home-manager.users.hbh = import ./home-manager/home.nix;
           }
+          sops-nix.nixosModules.sops
         ];
       };
     };
