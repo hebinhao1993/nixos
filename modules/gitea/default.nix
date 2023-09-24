@@ -1,8 +1,8 @@
 { inputs, lib, config, pkgs, ... }: 
 {
   sops.age.keyFile = "/var/lib/sops-nix/keys.txt";
-  sops.secrets."postgres/gitea_dbpass" = {
-      sopsFile = ../../secrets/postgres.yaml; # bring your own password file
+  sops.secrets."gitea/db_pass" = {
+      sopsFile = ../../secrets/gitea/db.yaml; # bring your own password file
       owner = config.users.users.gitea.name;
   };
 
@@ -11,7 +11,7 @@
     appName = "nixvb: Gitea Service"; # Give the site a name
     database = {
       type = "postgres"; # Database type
-      passwordFile = config.sops.secrets."postgres/gitea_dbpass".path;
+      passwordFile = config.sops.secrets."gitea/db_pass".path;
     };
     settings.server = {
       ROOT_URL = "http://gitea.nixvb.com/"; # Root web URL
