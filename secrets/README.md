@@ -15,6 +15,9 @@ if you store your secret into `secrets/example/binary`, using:
 nix-shell -p sops --run "sops -e some-source-file > secrets/example/binary"
 ```
 
+**Note**: you should meet the requirement of creation_rules defined in .sops.yaml. If not, you can not create encrypted files.
+When using binary format， the source file should satisfy the requirement.
+
 ## the name requirements
 
 when you use `sops.secrets.<name> = {...}`， the name should be the corresponding key.
