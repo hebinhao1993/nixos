@@ -27,11 +27,11 @@
     config = {
       defaultPhoneRegion = "CN";
       adminuser = "nextcloudamdin"; 
-      adminpassFile = config.sops.secrets."nextcloud-admin_pass".path;
+      adminpassFile = config.sops.secrets."nextcloud/adminpass".path;
       dbtype = "pgsql";
       dbname = "nextcloud";
       dbuser = "nextcloud";
-      # dbpassFile = config.sops.secrets."nextcloud-db_pass".path; #  Using `services.nextcloud.database.createLocally` with database password authentication is no longer supported.
+      # dbpassFile = config.sops.secrets."nextcloud/dbpass".path; #  Using `services.nextcloud.database.createLocally` with database password authentication is no longer supported.
     }; 
   };
 }
