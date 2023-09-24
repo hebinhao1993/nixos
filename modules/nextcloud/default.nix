@@ -4,12 +4,12 @@
 
   sops.secrets= {
     "nextcloud/adminpass" = {
-      format = "binary";
+      format = "yaml";
       sopsFile = ../../secrets/default.yaml;
       owner = config.users.users.nextcloud.name;
     };
     "nextcloud/dbpass" = {
-      format = "binary";
+      format = "yaml";
       sopsFile = ../../secrets/default.yaml;
       owner = config.users.users.nextcloud.name;
     };
