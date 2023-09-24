@@ -145,6 +145,7 @@
     gnupg
     pinentry
     pinentry-curses
+    age
   ];
 
   programs.gnupg.agent = {
