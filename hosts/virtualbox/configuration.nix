@@ -96,6 +96,47 @@
     };
   };
 
+  sops.secrets."postgres/gitea_dbpass" = {
+    sopsFile = ../.secrets/postgres.yaml; # bring your own password file
+    owner = config.users.users.gitea.name;
+  };
+
+  services.gitea = {
+    enable = true;                               # Enable Gitea
+    appName = "nixvb: Gitea Service";         # Give the site a name
+    database = {
+      type = "postgres";                         # Database type
+      # passwordFile = config.sops.secrets."postgres/gitea_dbpass".path;
+      passwordFile = /;
+    };
+    domain = "gitea.nixvb.com";              # Domain name
+    rootUrl = "http://gitea.nixvb.com/";   # Root web URL
+    httpPort = 3001;                             # Provided unique port
+  };
+
+  services.postgresql = {
+    enable = true;
+    authentication = ''
+      local gitea all ident map=gitea-users
+    '';
+    identMap =                    # Map the gitea user to postgresql
+      ''
+        gitea-users gitea gitea
+      '';
+  };
+
+  services.nginx = {
+    enable = true;
+    recommendedGzipSettings = true;
+    recommendedOptimisation = true;
+    recommendedProxySettings = true;
+    recommendedTlsSettings = true;
+    virtualHosts."gitea.nixvb.com" = {                  # Gitea hostname
+      locations."/".proxyPass = "http://localhost:3001/";   # Proxy Gitea
+    };
+  };
+
+
   environment.systemPackages = with pkgs ; [
     git
     vim
