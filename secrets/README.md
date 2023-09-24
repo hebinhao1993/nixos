@@ -14,3 +14,20 @@ if you store your secret into `secrets/example/binary`, using:
 ```
 nix-shell -p sops --run "sops -e some-source-file > secrets/example/binary"
 ```
+
+## the name requirements
+
+when you use `sops.secrets.<name> = {...}`， the name should be the corresponding key.
+
+For example, in `module/gitea/default.nix`， I use:
+
+```
+sops.secrets."gitea/dbpass" = {
+      sopsFile = ../../secrets/default.yaml; # bring your own password file
+      owner = config.users.users.gitea.name;
+  };
+```
+
+the name `gitea/dbpass` means you select the value from the yaml file with key `gitea/dbpass`. It cannot be an arbitray name.
+
+sops-nix will generate a file for every entry in the yaml file.
