@@ -96,6 +96,7 @@
     };
   };
 
+  sops.age.keyFile = "/var/lib/sops-nix/keys.txt";
   sops.secrets."postgres/gitea_dbpass" = {
     sopsFile = ../../secrets/postgres.yaml; # bring your own password file
     owner = config.users.users.gitea.name;
