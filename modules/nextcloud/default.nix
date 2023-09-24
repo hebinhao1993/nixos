@@ -4,11 +4,11 @@
 
   sops.secrets= {
     "nextcloud/admin_pass" = {
-      sopsFile = ../../secrets/nextcloud/admin.yaml; # bring your own password file
+      sopsFile = ../../secrets/nextcloud/admin.pass; # bring your own password file
       owner = config.users.users.nextcloud.name;
     };
     "nextcloud/db_pass" = {
-      sopsFile = ../../secrets/nextcloud/db.yaml; # bring your own password file
+      sopsFile = ../../secrets/nextcloud/db.pass; # bring your own password file
       owner = config.users.users.nextcloud.name;
     };
   };
