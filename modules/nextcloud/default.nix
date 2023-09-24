@@ -4,10 +4,12 @@
 
   sops.secrets= {
     "nextcloud-admin_pass" = {
+      format = "binary";
       sopsFile = ../../secrets/nextcloud/admin.pass; # bring your own password file
       owner = config.users.users.nextcloud.name;
     };
     "nextcloud-db_pass" = {
+      format = "binary";
       sopsFile = ../../secrets/nextcloud/db.pass; # bring your own password file
       owner = config.users.users.nextcloud.name;
     };
