@@ -108,9 +108,11 @@
       type = "postgres";                         # Database type
       passwordFile = config.sops.secrets."postgres/gitea_dbpass".path;
     };
-    domain = "gitea.nixvb.com";              # Domain name
-    rootUrl = "http://gitea.nixvb.com/";   # Root web URL
-    httpPort = 3001;                             # Provided unique port
+    settings.server = {
+      ROOT_URL = "http://gitea.nixvb.com/"; # Root web URL
+      HTTP_PORT = 3001; # Provided unique port
+      DOMAIN = "gitea.nixvb.com"; # Domain name
+    };  
   };
 
   services.postgresql = {
