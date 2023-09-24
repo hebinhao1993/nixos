@@ -3,14 +3,14 @@
   services.nginx.virtualHosts."nextcloud.nixvb.com" = {};
 
   sops.secrets= {
-    "nextcloud-admin_pass" = {
+    "nextcloud/adminpass" = {
       format = "binary";
-      sopsFile = ../../secrets/nextcloud/admin.pass;
+      sopsFile = ../../secrets/default.yaml;
       owner = config.users.users.nextcloud.name;
     };
-    "nextcloud-db_pass" = {
+    "nextcloud/dbpass" = {
       format = "binary";
-      sopsFile = ../../secrets/nextcloud/db.pass;
+      sopsFile = ../../secrets/deafult.yaml;
       owner = config.users.users.nextcloud.name;
     };
   };
