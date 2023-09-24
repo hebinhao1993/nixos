@@ -7,7 +7,11 @@
   services.sftpgo = {
     enable = true;
     settings = {
-      httpd.bindings.*.port = 3002;
+      httpd.bindings = [
+        {
+          port = 3002;
+        }
+      ];
     };
   };
 }
