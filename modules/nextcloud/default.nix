@@ -31,7 +31,7 @@
       dbtype = "pgsql";
       dbname = "nextcloud";
       dbuser = "nextcloud";
-      dbpassFile = config.sops.secrets."nextcloud-db_pass".path;
+      # dbpassFile = config.sops.secrets."nextcloud-db_pass".path; #  Using `services.nextcloud.database.createLocally` with database password authentication is no longer supported.
     }; 
   };
 }
