@@ -3,11 +3,11 @@
   services.nginx.virtualHosts."nextcloud.nixvb.com" = {};
 
   sops.secrets= {
-    "nextcloud/admin_pass" = {
+    "nextcloud-admin_pass" = {
       sopsFile = ../../secrets/nextcloud/admin.pass; # bring your own password file
       owner = config.users.users.nextcloud.name;
     };
-    "nextcloud/db_pass" = {
+    "nextcloud-db_pass" = {
       sopsFile = ../../secrets/nextcloud/db.pass; # bring your own password file
       owner = config.users.users.nextcloud.name;
     };
@@ -25,11 +25,11 @@
     config = {
       defaultPhoneRegion = "CN";
       adminuser = "nextcloudamdin"; 
-      adminpassFile = config.sops.secrets."nextcloud/admin_pass".path;
+      adminpassFile = config.sops.secrets."nextcloud-admin_pass".path;
       dbtype = "pgsql";
       dbname = "nextcloud";
       dbuser = "nextcloud";
-      dbpassFile = config.sops.secrets."nextcloud/db_pass".path;
+      dbpassFile = config.sops.secrets."nextcloud-db_pass".path;
     }; 
   };
 }
