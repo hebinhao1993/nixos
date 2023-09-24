@@ -1,8 +1,8 @@
 { inputs, lib, config, pkgs, ... }: 
 {
   sops.age.keyFile = "/var/lib/sops-nix/keys.txt";
-  sops.secrets."gitea/db_pass" = {
-      sopsFile = ../../secrets/gitea/db.yaml; # bring your own password file
+  sops.secrets."gitea/dbpass" = {
+      sopsFile = ../../secrets/default.yaml; # bring your own password file
       owner = config.users.users.gitea.name;
   };
 
