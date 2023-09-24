@@ -96,10 +96,10 @@
     };
   };
 
-  sops.secrets."postgres/gitea_dbpass" = {
-    sopsFile = ../.secrets/postgres.yaml; # bring your own password file
-    owner = config.users.users.gitea.name;
-  };
+  # sops.secrets."postgres/gitea_dbpass" = {
+  #   sopsFile = ../.secrets/postgres.yaml; # bring your own password file
+  #   owner = config.users.users.gitea.name;
+  # };
 
   # services.gitea = {
   #   enable = true;                               # Enable Gitea
