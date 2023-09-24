@@ -10,7 +10,7 @@
     };
     "nextcloud/dbpass" = {
       format = "binary";
-      sopsFile = ../../secrets/deafult.yaml;
+      sopsFile = ../../secrets/default.yaml;
       owner = config.users.users.nextcloud.name;
     };
   };
