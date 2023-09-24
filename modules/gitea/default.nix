@@ -11,7 +11,7 @@
     appName = "nixvb: Gitea Service"; # Give the site a name
     database = {
       type = "postgres"; # Database type
-      passwordFile = config.sops.secrets."gitea/db_pass".path;
+      passwordFile = config.sops.secrets."gitea/dbpass".path;
     };
     settings.server = {
       ROOT_URL = "http://gitea.nixvb.com/"; # Root web URL
