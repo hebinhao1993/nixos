@@ -12,3 +12,7 @@ Besides, the use of submodule break the decentralization. When I import the nixo
 The content of `dotfiles` should be exactly the same as some commit of https://github.com/hebinhao1993/dotfiles when in the master/main branch of this nixos repo. The `version.txt` is an exception, which is used to track the commit id of https://github.com/hebinhao1993/dotfiles.
 
 When in the dev branch, the content of `dotfiles` can be different.
+
+## TODO
+
+- VSCode
