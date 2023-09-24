@@ -101,18 +101,18 @@
     owner = config.users.users.gitea.name;
   };
 
-  services.gitea = {
-    enable = true;                               # Enable Gitea
-    appName = "nixvb: Gitea Service";         # Give the site a name
-    database = {
-      type = "postgres";                         # Database type
-      # passwordFile = config.sops.secrets."postgres/gitea_dbpass".path;
-      passwordFile = /;
-    };
-    domain = "gitea.nixvb.com";              # Domain name
-    rootUrl = "http://gitea.nixvb.com/";   # Root web URL
-    httpPort = 3001;                             # Provided unique port
-  };
+  # services.gitea = {
+  #   enable = true;                               # Enable Gitea
+  #   appName = "nixvb: Gitea Service";         # Give the site a name
+  #   database = {
+  #     type = "postgres";                         # Database type
+  #     # passwordFile = config.sops.secrets."postgres/gitea_dbpass".path;
+  #     passwordFile = /;
+  #   };
+  #   domain = "gitea.nixvb.com";              # Domain name
+  #   rootUrl = "http://gitea.nixvb.com/";   # Root web URL
+  #   httpPort = 3001;                             # Provided unique port
+  # };
 
   services.postgresql = {
     enable = true;
