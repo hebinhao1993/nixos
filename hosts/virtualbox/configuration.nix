@@ -102,10 +102,10 @@
   };
 
   services.gitea = {
-    enable = true;                               # Enable Gitea
-    appName = "nixvb: Gitea Service";         # Give the site a name
+    enable = true; # Enable Gitea
+    appName = "nixvb: Gitea Service"; # Give the site a name
     database = {
-      type = "postgres";                         # Database type
+      type = "postgres"; # Database type
       passwordFile = config.sops.secrets."postgres/gitea_dbpass".path;
     };
     settings.server = {
