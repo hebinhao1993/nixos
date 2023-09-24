@@ -15,6 +15,7 @@
     ./hardware-configuration.nix
     ../../modules/gitea
     ../../modules/nextcloud
+    ../../modules/sftpgo
   ];
 
   nixpkgs = {
