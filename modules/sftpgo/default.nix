@@ -4,7 +4,7 @@
     locations."/".proxyPass = "http://localhost:3002/";
   };
 
-  // TODO: add webdav
+  # TODO: add webdav
   services.sftpgo = {
     enable = true;
     settings = {
