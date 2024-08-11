@@ -51,11 +51,13 @@
     nixosConfigurations = {
       # hostname nixvb means nixos on virturalbox
       nixvb = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs; }; # Pass flake inputs to our config
-        # > Our main nixos configuration file <
+        specialArgs = { inherit inputs; }; 
         modules = [
           ./hosts/virtualbox/configuration.nix
-
+          {
+            # Pass flake inputs to our nixos configuration file
+            _module.args = { inherit inputs; };
+          }
           # home-manager as a NixOS module
           home-manager.nixosModules.home-manager
           {
