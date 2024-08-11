@@ -48,7 +48,7 @@
   };
 
   # Add stuff for your user as you see fit:
-  # programs.neovim.enable = true;
+  # the software below are only available for the current user.
   home.packages = with pkgs; [
     jq
     fzf
