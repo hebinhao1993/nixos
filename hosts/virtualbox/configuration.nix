@@ -63,8 +63,6 @@
         "hbh"
         "@wheel"
       ];
-      # optimize storage
-      auto-optimise-store = true;
     };
 
     # do garbage collection weekly to keep disk usage low
