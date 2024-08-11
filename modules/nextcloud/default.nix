@@ -24,7 +24,7 @@
     hostName = "nextcloud.nixvb.com";
     maxUploadSize = "10240M";
     database.createLocally = true;
-    setttings = {
+    settings = {
       defaultPhoneRegion = "CN";
     };
     config = {
