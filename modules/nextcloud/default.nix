@@ -24,8 +24,10 @@
     hostName = "nextcloud.nixvb.com";
     maxUploadSize = "10240M";
     database.createLocally = true;
-    config = {
+    setttings = {
       defaultPhoneRegion = "CN";
+    };
+    config = {
       adminuser = "nextcloudamdin"; 
       adminpassFile = config.sops.secrets."nextcloud/adminpass".path;
       dbtype = "pgsql";
