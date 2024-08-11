@@ -124,10 +124,12 @@
     docker_27
   ];
 
+  virtualisation.docker.enable = true;
+
   programs.gnupg.agent = {
-   enable = true;
-   enableSSHSupport = true;
-};
+    enable = true;
+    enableSSHSupport = true;
+  };
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "24.05";
