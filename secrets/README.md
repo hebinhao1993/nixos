@@ -4,11 +4,13 @@ Using sops-nix to manage secrets.
 
 ## how to generate new secrets
 
-if you store your secrets into secrets/gitea/db.yaml, using:
+if you store your secrets into secrets/example.yaml, using:
 
 ```sh
 nix-shell -p sops --run "sops secrets/example.yaml"
 ```
+
+this command will open editor to create a new encrypted file or to decrypt an existing file to modify.
 
 if you store your secret into `secrets/example/binary`, using:
 ```
