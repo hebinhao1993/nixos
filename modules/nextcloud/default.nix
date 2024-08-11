@@ -18,7 +18,7 @@
 
   services.nextcloud = {
     enable = true;
-    package = pkgs.nextcloud27;
+    package = pkgs.nextcloud29;
     https = false;
     webfinger = true;
     hostName = "nextcloud.nixvb.com";
