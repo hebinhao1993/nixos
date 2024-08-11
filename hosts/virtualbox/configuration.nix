@@ -79,6 +79,9 @@
   networking.hostName = "nixvb";
   networking.networkmanager.enable = true;
   networking.firewall.allowedTCPPorts = [ 22 80 443 ];
+  networking.extraHosts = ''
+    127.0.0.1 gitea.nixvb.com
+  '';
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
