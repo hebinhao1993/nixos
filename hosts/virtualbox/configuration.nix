@@ -38,6 +38,9 @@
     };
   };
 
+  # do not need to keep too much generations
+  boot.loader.systemd-boot.configurationLimit = 10;
+
   nix = {
     # This will add each flake input as a registry
     # To make nix3 commands consistent with your flake
@@ -60,6 +63,15 @@
         "hbh"
         "@wheel"
       ];
+      # optimize storage
+      auto-optimise-store = true;
+    };
+
+    # do garbage collection weekly to keep disk usage low
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 1w";
     };
   };
 
