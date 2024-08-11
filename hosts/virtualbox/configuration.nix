@@ -93,7 +93,7 @@
       openssh.authorizedKeys.keys = [
         # TODO: Add your SSH public key(s) here, if you plan on using SSH to connect
       ];
-      extraGroups = [ "wheel" "networkmanager" ];
+      extraGroups = [ "wheel" "networkmanager" "docker" ];
       shell = pkgs.zsh;
     };
   };
@@ -121,10 +121,14 @@
     pinentry
     pinentry-curses
     age
-    docker_27
   ];
 
   virtualisation.docker.enable = true;
+  # use docker without Root access (Rootless docker)
+  virtualisation.docker.rootless = {
+    enable = true;
+    setSocketVariable = true;
+  };
 
   programs.gnupg.agent = {
     enable = true;
