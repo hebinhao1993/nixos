@@ -16,3 +16,10 @@ When in the dev branch, the content of `dotfiles` can be different.
 ## TODO
 
 - VSCode
+
+## How-To
+
+### how to use this flake
+
+clone this repo, cd this directory, type `sudo nixos-rebuild switch --flake .#nixvb`
+
