@@ -121,6 +121,7 @@
     pinentry
     pinentry-curses
     age
+    docker_27
   ];
 
   programs.gnupg.agent = {
