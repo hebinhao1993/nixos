@@ -16,6 +16,7 @@ When in the dev branch, the content of `dotfiles` can be different.
 ## TODO
 
 - VSCode
+- using docker to install gitea, nextcloud, sftpgo
 
 ## How-To
 
